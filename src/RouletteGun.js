@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 
 export default class RouletteGun extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      chamber: null,
+      spinningTheChamber: false,
+    };
+  }
   render() {
     return (
       <div className="RouletteGun">

@@ -14,8 +14,23 @@ export default class RouletteGun extends Component {
   };
 
   handleClick = () => {
-    console.log("pulled");
+    this.setState({
+      spinningTheChamber: true,
+    });
+
+    // creates a timeout, a slight pause before the result is rendered
+    this.timeout = setTimeout(() => {
+      const randomChamber = Math.ceil(Mat.random() * 8);
+      // random number is generated and then the state is set again
+
+      this.setState({
+        chamber: randomChamber,
+        spinningTheChamber: false,
+      });
+    });
   };
+
+  renderDisplay() {}
 
   render() {
     return (

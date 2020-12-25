@@ -27,7 +27,7 @@ export default class RouletteGun extends Component {
         chamber: randomChamber,
         spinningTheChamber: false,
       });
-    });
+    }, 2000);
   };
 
   componentWillUnmount() {
@@ -39,7 +39,7 @@ export default class RouletteGun extends Component {
     const { spinningTheChamber, chamber } = this.state;
     const { bulletInChamber } = this.props;
     if (spinningTheChamber === true) {
-      return "spinning the camber and pulling the trigger!. . . ";
+      return "spinning the chamber and pulling the trigger!. . . ";
     }
     // if this.state.chamber === bulletinchamber props, return bang
     if (chamber === bulletInChamber) {

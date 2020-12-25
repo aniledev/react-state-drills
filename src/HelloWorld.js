@@ -13,9 +13,9 @@ export default class HelloWorld extends React.Component {
       <div className="HelloWorld">
         <h2>HelloWorld Component</h2>
         <p>This text is updated using state: Hello, {this.state.who}.</p>
-        <button>World</button>
-        <button>Friend</button>
-        <button>React</button>
+        <button className="world">World</button>
+        <button className="friend">Friend</button>
+        <button className="react">React</button>
       </div>
     );
   }

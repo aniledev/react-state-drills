@@ -26,3 +26,13 @@ button {
   font-size: 15px;
   font-weight: bold;
 }
+
+.world {
+  background-color: #b0f2b4;
+}
+.friend {
+  background-color: #bad7f2;
+}
+.react {
+  background-color: #f2bac9;
+}

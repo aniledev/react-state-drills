@@ -8,11 +8,23 @@ export default class Bomb extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState({
+        count: this.state.count + 1,
+      });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
     return (
       <div className="Bomb">
         <h2>Bomb Component</h2>
-        <p>{/*Tick, Tock or BOOM!*/}</p>
+        <p>{count}</p>
       </div>
     );
   }

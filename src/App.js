@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <HelloWorld />
       <Bomb />
-      <RouletteGun />
+      <RouletteGun bulletInChamber={8} />
     </div>
   );
 }

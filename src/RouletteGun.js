@@ -8,6 +8,11 @@ export default class RouletteGun extends Component {
       spinningTheChamber: false,
     };
   }
+
+  static defaultProps = {
+    bulletInChamber: 8,
+  };
+
   render() {
     return (
       <div className="RouletteGun">

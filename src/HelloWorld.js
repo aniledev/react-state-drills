@@ -11,7 +11,7 @@ export default class HelloWorld extends React.Component {
   render() {
     return (
       <div className="HelloWorld">
-        <h2>HelloWorld Component</h2>
+        <h2>Hello World Component</h2>
         <p>
           This text is updated using state: Hello,{" "}
           <strong>{this.state.who}</strong>

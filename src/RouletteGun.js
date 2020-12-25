@@ -36,7 +36,7 @@ export default class RouletteGun extends Component {
 
   renderDisplay() {
     // if spinnning === true, return spinning chamber
-    const { spinningTheChamber, chamber } = this.sate;
+    const { spinningTheChamber, chamber } = this.state;
     const { bulletInChamber } = this.props;
     if (spinningTheChamber === true) {
       return "spinning the camber and pulling the trigger!. . . ";

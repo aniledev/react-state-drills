@@ -20,7 +20,7 @@ export default class RouletteGun extends Component {
 
     // creates a timeout, a slight pause before the result is rendered
     this.timeout = setTimeout(() => {
-      const randomChamber = Math.ceil(Mat.random() * 8);
+      const randomChamber = Math.ceil(Math.random() * 8);
       // random number is generated and then the state is set again
 
       this.setState({

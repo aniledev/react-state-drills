@@ -30,6 +30,10 @@ export default class RouletteGun extends Component {
     });
   };
 
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
   renderDisplay() {
     // if spinnning === true, return spinning chamber
     const { spinningTheChamber, chamber } = this.sate;

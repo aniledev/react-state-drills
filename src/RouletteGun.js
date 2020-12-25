@@ -38,14 +38,22 @@ export default class RouletteGun extends Component {
     // if spinnning === true, return spinning chamber
     const { spinningTheChamber, chamber } = this.state;
     const { bulletInChamber } = this.props;
+    if (spinningTheChamber === false && chamber === null) {
+      //otherwise, render you're safe
+      return "";
+    }
     if (spinningTheChamber === true) {
       return "spinning the chamber and pulling the trigger!. . . ";
     }
     // if this.state.chamber === bulletinchamber props, return bang
     if (chamber === bulletInChamber) {
-      return "BANG!!!";
-    } else {
-      //otherwise, render you're safe
+      return (
+        <strong className="bang">
+          <i>BANG!!!</i>
+        </strong>
+      );
+    }
+    if (chamber !== bulletInChamber) {
       return "You're safe. . . This time.";
     }
   }

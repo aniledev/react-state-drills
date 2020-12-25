@@ -41,7 +41,8 @@ button {
   margin-top: 75px;
 }
 
-.boom {
+.boom,
+.bang {
   color: #f2bac9;
   font-size: 50px;
 }

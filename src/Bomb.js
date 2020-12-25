@@ -26,7 +26,11 @@ export default class Bomb extends React.Component {
     // if count is greater than or equal to 8, return BOOM
     if (count >= 8) {
       clearInterval(this.interval);
-      return <strong className="boom">BOOM!!!!!</strong>;
+      return (
+        <strong className="boom">
+          <i>BOOM!!!!!</i>
+        </strong>
+      );
     }
     // if count is divisible by 2, then return tick
     if (count % 2 === 0) {

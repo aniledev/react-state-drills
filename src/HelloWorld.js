@@ -4,7 +4,7 @@ export default class HelloWorld extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      who: "world",
+      who: "world!",
     };
   }
 
@@ -18,21 +18,21 @@ export default class HelloWorld extends React.Component {
         </p>
         <button
           className="world"
-          onClick={() => this.setState({ who: "world" })}
+          onClick={() => this.setState({ who: "world!" })}
         >
-          World
+          world
         </button>
         <button
           className="friend"
-          onClick={() => this.setState({ who: "friend" })}
+          onClick={() => this.setState({ who: "friend!" })}
         >
-          Friend
+          friend
         </button>
         <button
           className="react"
-          onClick={() => this.setState({ who: "react" })}
+          onClick={() => this.setState({ who: "react!" })}
         >
-          React
+          react
         </button>
       </div>
     );

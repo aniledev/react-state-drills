@@ -50,8 +50,7 @@ button {
   margin-top: 75px;
 }
 
-button.trigger,
-button#trigger {
+.trigger {
   border-radius: 5px;
   border: none;
   width: 10em;

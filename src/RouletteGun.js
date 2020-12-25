@@ -13,12 +13,16 @@ export default class RouletteGun extends Component {
     bulletInChamber: 8,
   };
 
+  handleClick = () => {
+    console.log("pulled");
+  };
+
   render() {
     return (
       <div className="RouletteGun">
         <h2>Roulette Gun Component</h2>
         <p>{/* Spinning, safe, or BANG!!! */}</p>
-        <button id="trigger" classname="trigger">
+        <button id="trigger" className="trigger" onClick={this.handleClick}>
           Pull the trigger!
         </button>
       </div>

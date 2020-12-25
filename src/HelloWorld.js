@@ -14,7 +14,7 @@ export default class HelloWorld extends React.Component {
         <h2>HelloWorld Component</h2>
         <p>
           This text is updated using state: Hello,{" "}
-          <strong>{this.state.who}</strong>.
+          <strong>{this.state.who}</strong>
         </p>
         <button
           className="world"
@@ -30,9 +30,9 @@ export default class HelloWorld extends React.Component {
         </button>
         <button
           className="react"
-          onClick={() => this.setState({ who: "react!" })}
+          onClick={() => this.setState({ who: "React!" })}
         >
-          react
+          React
         </button>
       </div>
     );

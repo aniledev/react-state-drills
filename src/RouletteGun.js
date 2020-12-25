@@ -5,6 +5,8 @@ export default class RouletteGun extends Component {
     return (
       <div className="RouletteGun">
         <h2>Roulette Gun Component</h2>
+        <p>{/* Spinning, safe, or BANG!!! */}</p>
+        <button classname="trigger">Pull the trigger!</button>
       </div>
     );
   }

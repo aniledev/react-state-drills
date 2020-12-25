@@ -30,13 +30,27 @@ export default class RouletteGun extends Component {
     });
   };
 
-  renderDisplay() {}
+  renderDisplay() {
+    // if spinnning === true, return spinning chamber
+    const { spinningTheChamber, chamber } = this.sate;
+    const { bulletInChamber } = this.props;
+    if (spinningTheChamber === true) {
+      return "spinning the camber and pulling the trigger!. . . ";
+    }
+    // if this.state.chamber === bulletinchamber props, return bang
+    if (chamber === bulletInChamber) {
+      return "BANG!!!";
+    } else {
+      //otherwise, render you're safe
+      return "You're safe. . . This time.";
+    }
+  }
 
   render() {
     return (
       <div className="RouletteGun">
         <h2>Roulette Gun Component</h2>
-        <p>{/* Spinning, safe, or BANG!!! */}</p>
+        <p>{this.renderDisplay()}</p>
         <button id="trigger" className="trigger" onClick={this.handleClick}>
           Pull the trigger!
         </button>

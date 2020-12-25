@@ -12,10 +12,28 @@ export default class HelloWorld extends React.Component {
     return (
       <div className="HelloWorld">
         <h2>HelloWorld Component</h2>
-        <p>This text is updated using state: Hello, {this.state.who}.</p>
-        <button className="world">World</button>
-        <button className="friend">Friend</button>
-        <button className="react">React</button>
+        <p>
+          This text is updated using state: Hello,{" "}
+          <strong>{this.state.who}</strong>.
+        </p>
+        <button
+          className="world"
+          onClick={() => this.setState({ who: "world" })}
+        >
+          World
+        </button>
+        <button
+          className="friend"
+          onClick={() => this.setState({ who: "friend" })}
+        >
+          Friend
+        </button>
+        <button
+          className="react"
+          onClick={() => this.setState({ who: "react" })}
+        >
+          React
+        </button>
       </div>
     );
   }

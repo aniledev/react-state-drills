@@ -20,11 +20,29 @@ export default class Bomb extends React.Component {
     clearInterval(this.interval);
   }
 
+  displayResult() {
+    const { count } = this.state;
+    // when count great than or equal to 8, clear interval
+    // if count is greater than or equal to 8, return BOOM
+    if (count >= 8) {
+      clearInterval(this.interval);
+      return "BOOM!!!!!";
+    }
+    // if count is divisible by 2, then return tick
+    if (count % 2 === 0) {
+      return "tick";
+    }
+    // if count is NOT divisible by 2 return tock
+    else {
+      return "tock";
+    }
+  }
+
   render() {
     return (
       <div className="Bomb">
         <h2>Bomb Component</h2>
-        <p>{count}</p>
+        <p>{this.displayResult()}</p>
       </div>
     );
   }

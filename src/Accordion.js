@@ -7,17 +7,17 @@ export default class Accordion extends React.Component {
     activeIndex: [],
   };
 
-  handleSection = (activeIndex) => {
+  handleCurrentSection = (sectionIndex) => {
     this.setState({
-      activeIndex: null,
+      activeIndex: sectionIndex,
     });
   };
 
   // this function shoulder render one list item, not all the list items
   renderSectionContent(section, index, activeIndex) {
     return (
-      <li>
-        <button type="button" onClick={() => this.handleSection(index)}>
+      <li className="section-name" key={index}>
+        <button type="button" onClick={() => this.handleCurrentSection(index)}>
           {section.title}
         </button>
         {/* This will contain a conditional rendering statement */}

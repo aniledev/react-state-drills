@@ -7,13 +7,16 @@ export default class Accordion extends React.Component {
     activeIndex: [],
   };
 
-  renderListItems() {
-    const list = this.props.sections.map((section, index) => (
+  // this function shoulder render one list item, not all the list items
+  renderSectionContent(section, index, activeIndex) {
+    return (
       <li>
-        <button key={index}>{section.title}</button>
+        <button type="button" onClick={() => this.handleSection(index)}>
+          {section.title}
+        </button>
+        {section.content}
       </li>
-    ));
-    return <div className="buttons-list">{list}</div>;
+    );
   }
 
   render() {

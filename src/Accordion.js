@@ -3,6 +3,10 @@ import React from "react";
 export default class Accordion extends React.Component {
   static defaultProps = { sections: [] };
 
+  state = {
+    activeIndex: [],
+  };
+
   renderListItems() {
     const list = this.props.sections.map((section, index) => (
       <li>

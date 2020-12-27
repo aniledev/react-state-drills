@@ -18,7 +18,11 @@ export default class Accordion extends React.Component {
   renderSectionContent(section, index, activeIndex) {
     return (
       <li className="section-name" key={index}>
-        <button type="button" onClick={() => this.handleCurrentSection(index)}>
+        <button
+          className="active"
+          type="button"
+          onClick={() => this.handleCurrentSection(index)}
+        >
           {section.title}
         </button>
         {/* This will contain a conditional rendering statement that will conditionally render the content if the activeIndex === the index of the list item */}

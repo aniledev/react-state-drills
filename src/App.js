@@ -2,6 +2,7 @@ import "./App.css";
 import HelloWorld from "./HelloWorld";
 import Bomb from "./Bomb";
 import RouletteGun from "./RouletteGun";
+import Accordion from "./Accordion";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <HelloWorld />
       <Bomb />
       <RouletteGun bulletInChamber={8} />
+      <Accordion />
     </div>
   );
 }

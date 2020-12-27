@@ -6,6 +6,7 @@ import Accordion from "./Accordion";
 
 function App() {
   // create prop to pass down to Accordion component
+  // sections prop is an array of objects, each with two keys title and content, both strings
   const sectionsProp = [
     {
       title: "Section 1",

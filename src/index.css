@@ -55,7 +55,9 @@ world:focus {
   background-color: #e2be65;
 }
 
-.Bomb {
+.Bomb,
+.RouletteGun,
+.Accordion {
   margin-top: 75px;
 }
 
@@ -63,10 +65,6 @@ world:focus {
 .bang {
   color: #f2bac9;
   font-size: 50px;
-}
-
-.RouletteGun {
-  margin-top: 75px;
 }
 
 .trigger {

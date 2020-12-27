@@ -28,6 +28,7 @@ export default class Accordion extends React.Component {
 
   render() {
     return (
+      // refractor this method to render the buttons list and also render the renderSectionContent for one list item
       <div className="Accordion">
         <h2>Accordion Component</h2>
         <ul className="section-list">{this.renderListItems()}</ul>
